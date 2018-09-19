@@ -6,13 +6,12 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'language' => 'ru',
-    'layout' => 'main',
+    'language' => 'ru-RU',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '2ZD-M28L6qQhisxwUXoPOEOceflmgfPQ',
-            'baseUrl' => ''
+            'cookieValidationKey' => 'uvxfBK9B1S8ovnPJGbcAYyRrRCj56Qh3',
+            'baseUrl' => '',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -40,21 +39,13 @@ $config = [
                 ],
             ],
         ],
+        'db' => require(__DIR__ . '/db.php'),
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-//            'suffix' => '.html',
             'rules' => [
-                /*[
-                    'pattern' => '',
-                    'route' => 'site/index',
-                    'suffix' => ''
-                ],
-                '<action:(about|contact|login)>' => 'site/<action>',
-//                '<action:about>' => 'page/about',*/
             ],
         ],
-        'db' => require(__DIR__ . '/db.php'),
     ],
     'params' => $params,
 ];
@@ -69,7 +60,6 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
-//        'allowedIPs' => ['127.0.0.1']
     ];
 }
 
