@@ -19,7 +19,6 @@
  
 </head>
 <body>
-
 <!--Header_section-->
 <header id="header_wrapper">
   @yield('header')
